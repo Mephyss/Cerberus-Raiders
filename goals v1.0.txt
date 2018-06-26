@@ -1,0 +1,7 @@
+﻿GOALS V 1.0
+
+* Map/Encounter Selection
+* 2 Keyframes with animations between them
+* Classes/Specs icons drag and drop
+* Markers and drawing system
+* Load/Save encounter setup
