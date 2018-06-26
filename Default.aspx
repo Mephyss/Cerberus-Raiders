@@ -11,7 +11,7 @@
 
     <script>
         $(function () {
-            $("#raid_icons").draggable();
+            $("#raid_icons img").draggable();
         });
     </script>
 </head>

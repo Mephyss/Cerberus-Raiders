@@ -45,7 +45,7 @@ public partial class _Default : System.Web.UI.Page
                         src = "img/missing.png";
                     }
 
-                    raid_icons.Text += "<img width='30px' height='30px' src='" + src + "' title='" + data[1]+ "' />";
+                    raid_icons.Text += "<img width='30px' height='30px' class='icons' src='" + src + "' title='" + data[1]+ "' />";
                 }
             }
         }
