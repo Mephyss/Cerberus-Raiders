@@ -6,6 +6,14 @@
 <head runat="server">
     <title>Encounter Planner - Cerberus Raiders</title>
     <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $("#raid_icons").draggable();
+        });
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
