@@ -1,0 +1,24 @@
+section=Tanks
+icon=protectionwarrior.png;Protection Warrior
+icon=protectionpaladin.png;Protection Paladin
+icon=guardiandruid.png;Guardian Druid
+icon=brewmastermonk.png;Brewmaster Monk
+icon=blooddk.png;Blood Death Knight
+icon=vengeancedh.png;Vengeance Demon Hunter
+section=Healers
+icon=discpriest.png;Discipline Priest
+icon=holypriest.png;Holy Priest
+icon=holypaladin.png;Holy Paladin
+icon=mistweavermonk.png;Mistweaver Monk
+icon=restorationshaman.png;Restoration Shaman
+icon=restorationdruid.png;Restoration Druid
+section=Range Damage
+icon=balancedruid.png;Balance Druid
+section=Melee Damage
+icon=feraldruid.png;Feral Druid
+section=Standard
+icon=tank.png;Tank
+icon=healer.png;Healer
+icon=melee.png;Melee
+icon=range.png;Range
+
