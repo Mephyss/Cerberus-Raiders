@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="styles.css" type="text/css" />
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="js/cerberus.js"></script>
 
     <script>
         $(function () {
-            $("#raid_icons img").draggable();
+
         });
     </script>
 </head>
@@ -24,6 +25,7 @@
                 <asp:Button runat="server" Text="Load" />
                 <asp:Button runat="server" Text="Save" />
                 <asp:Button runat="server" Text="Clear" />
+                <span id="alert"></span>
             </asp:panel>
             <asp:panel runat="server" ID="layout_content">
                 <asp:panel runat="server" ID="main_tools">
@@ -33,15 +35,13 @@
                 <asp:panel runat="server" ID="layout_right">
                     <asp:panel runat="server" ID="main_timeline">
                         TIMELINE<br />
-                        <asp:Button runat="server" ID="add0" Text="add" CssClass="addkeyframe" OnClientClick="return false;"  />
+                        <asp:Button runat="server" ID="btn_run" Text="Run" OnClientClick="Run(); return false;"  />
+                        <asp:Button runat="server" ID="keyframe1" Text="1" CssClass="keyframe" OnClientClick="return false;"  />
                         <asp:Image runat="server" ImageUrl="~/img/bar.png" Width="50px" CssClass="bar" />
-                        <asp:Button runat="server" ID="keyframe" Text="1" CssClass="keyframe" OnClientClick="return false;"  />
-                        <asp:Image runat="server" ImageUrl="~/img/bar.png" Width="50px" CssClass="bar" />
-                        <asp:Button runat="server" ID="add2" Text="add" CssClass="addkeyframe" OnClientClick="return false;"  />
+                        <asp:Button runat="server" ID="keyframe2" Text="2" CssClass="keyframe" OnClientClick="return false;"  />
                     </asp:panel>
                     <asp:panel runat="server" ID="main_canvas">
-                        <asp:label runat="server" ID="map"></asp:label>
-                        <canvas></canvas>
+                        <asp:panel runat="server" id="canvas" style="border: 3px solid #f00; position: absolute" width="800px" height="500px"></asp:panel>
                     </asp:panel>
                 </asp:panel>
             </asp:panel>

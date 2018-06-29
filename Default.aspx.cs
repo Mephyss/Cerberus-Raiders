@@ -16,13 +16,15 @@ public partial class _Default : System.Web.UI.Page
 
     private void LoadMap(string file_name)
     {
-        map.Text += "<img src='" + file_name + "'/>";
+        //map.Text += "<img src='" + file_name + "'/>";
     }
 
     private void LoadTools(string file_name)
     {
         string path = Server.MapPath("/");
         file_name = path + "Cerberus/" + file_name;
+
+        int count = 1;
 
         if (File.Exists(file_name))
         {
@@ -45,7 +47,8 @@ public partial class _Default : System.Web.UI.Page
                         src = "img/missing.png";
                     }
 
-                    raid_icons.Text += "<img width='30px' height='30px' class='icons' src='" + src + "' title='" + data[1]+ "' />";
+                    raid_icons.Text += "<img class='icon' src='" + src + "' title='" + data[1]+ "' onclick='SelectToken(\"" + data[0] + "\", " + count + ")' />";
+                    ++count;
                 }
             }
         }
