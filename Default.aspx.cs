@@ -35,7 +35,7 @@ public partial class _Default : System.Web.UI.Page
                 string[] parts = line.Split('=');
                 if (parts[0] == "section")
                 {
-                    raid_icons.Text += "<br><br>" +parts[1]+ "<br><br>";
+                    raid_icons.Text += "<br><br>" +parts[1]+ "<br>";
                 }
                 else if (parts[0] == "icon")
                 {

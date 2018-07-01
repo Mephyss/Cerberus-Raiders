@@ -32,7 +32,7 @@ body {
 }
 
 #main_menu {
-    background: #20283E;
+    background: #fff; /*#20283E;*/
     border-bottom: 2px solid #000;
     display: flex;
     align-items: center;
@@ -69,10 +69,6 @@ body {
     min-height: 91%;
 }
 
-.keyframe {
-    height: 50px;
-}
-
 .addkeyframe {
     height: 20px;
     margin-top: 10px;
@@ -81,4 +77,22 @@ body {
 .bar {
     height: 5px;
     margin: 0px;
+}
+
+.selected_kf {
+    box-shadow: 0px 0px 20px 10px #ff0;
+    height: 50px;
+}
+
+.keyframe {
+    height: 50px;
+}
+
+.menu_button {
+    width: 75px;
+    margin: 5px;
+}
+
+.unavailable {
+    text-decoration: line-through;
 }
