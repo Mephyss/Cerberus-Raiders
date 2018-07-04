@@ -138,12 +138,15 @@ function StartNewEncounter() {
     var map_title = $("#fm_map_title").val();
     var map = $("#fm_map").val();
 
+    if (map != "0") {
+        // Set the data on the form and submit
+        $("#new_map_title").val(map_title);
+        $("#new_map_map").val(map);
+        $("#new_map_flag").val("1");
+        $("#form_main").submit();
+    }
 
-    // Set the data on the form and submit
-    $("#new_map_title").val(map_title);
-    $("#new_map_map").val(map);
-    $("#new_map_flag").val("1");
-    $("#form_main").submit();
+    CloseWindow();
 }
 
 /*

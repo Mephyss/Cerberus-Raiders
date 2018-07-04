@@ -1,6 +1,6 @@
 ﻿GOALS V 1.0
 
-* Map/Encounter Selection
+DONE - Map/Encounter Selection
 DONE - 2 Keyframes with animations between them
 DONE - Classes/Specs icons drag and drop
 * Markers and drawing system
