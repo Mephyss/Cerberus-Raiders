@@ -13,7 +13,6 @@ var first_keyframe = 1;
 var keyframe_count = 2;
 
 $(document).ready(function () {
-    $("#canvas").css("background", "url(img/antorus-argus.png) no-repeat");
     /*
     $(document).on("contextmenu", function (e) {
         if (e.target.nodeName != "INPUT" && e.target.nodeName != "TEXTAREA")
@@ -47,6 +46,10 @@ $(document).ready(function () {
 
     SetKeyframe(first_keyframe);
 });
+
+function LoadMap(map_file) {
+    $("#canvas").css("background", "url(" + map_file+ ") no-repeat");
+}
 
 function SetKeyframe(keyframe) {
     // Clear all keyframe glows
@@ -120,4 +123,57 @@ function Run() {
             top: table_data[i][next_keyframe].y
         }, 2000, function () { });
     }
+}
+
+/*
+ NEW MAP
+ */
+
+function OpenNewEncounter() {
+    OpenWindow("new_map.aspx", "", "New Encounter");
+}
+
+function StartNewEncounter() {
+    // Get data from the window
+    var map_title = $("#fm_map_title").val();
+    var map = $("#fm_map").val();
+
+
+    // Set the data on the form and submit
+    $("#new_map_title").val(map_title);
+    $("#new_map_map").val(map);
+    $("#new_map_flag").val("1");
+    $("#form_main").submit();
+}
+
+/*
+ * Windows
+ * */
+
+function CloseWindow() {
+    $("#pp_window").hide();
+};
+
+function OpenWindow(page, data, title) {
+    LoadAJAXDataPOST(page, "#pp_content", data);
+    $("#pp_title").html(title);
+    $("#pp_window").show();
+}
+
+function ResizeWindow(width, height) {
+    $("#pp_module").width(width + "px");
+    $("#pp_module").height(height + "px");;
+}
+
+function LoadAJAXDataPOST(url, div_selector, data) {
+    $(div_selector).html("Loading...");
+
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: data,
+        success: function (dados) {
+            $(div_selector).html(dados);
+        }
+    });
 }

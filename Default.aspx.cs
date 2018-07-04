@@ -10,13 +10,34 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        LoadTools(@"data/basic_tools.txt");
-        LoadMap(@"img/antorus-argus.png");
+        string map_flag = Request.Form["new_map_flag"];
+
+        if (map_flag == "1")
+        {
+            string map_map = Request.Form["new_map_map"];
+
+            LoadMap(map_map);
+        }
+        else
+        {
+            LoadMap(@"img/missing.png");
+        }
+
+        if (!Page.IsPostBack)
+        {
+            LoadTools(@"data/basic_tools.txt");
+        }
     }
 
     private void LoadMap(string file_name)
     {
-        //map.Text += "<img src='" + file_name + "'/>";
+        /*
+         * Look in the file to see the map
+         */
+
+        string script_map = "<script>LoadMap(\"img/" + file_name + "\");</script>";
+
+        ScriptManager.RegisterStartupScript(Page, Page.GetType(), Guid.NewGuid().ToString(), script_map, false);
     }
 
     private void LoadTools(string file_name)

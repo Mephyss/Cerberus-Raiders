@@ -1,0 +1,5 @@
+﻿section=Antorus
+map=antorus-argus.png;Argus
+map=antorus-aggramar.png;Aggramar
+section=Uldir
+map=uldir-tbd.png;TBD
